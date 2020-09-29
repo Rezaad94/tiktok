@@ -32,6 +32,16 @@ def loginWithUsername():
 		usr = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/b1j"))).send_keys(username)
 		psw = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/agc"))).send_keys(password)
 		loginbtn = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/box"))).click()
+		# skip	
+		el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/ctj")))
+		el.click()
+		# start watching
+		el = WebDriverWait(driver, 40).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/cxc")))
+		el.click()
+		el = WebDriverWait(driver, 40).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/as7")))
+		driver.swipe(250, 700, 250, 170, 1000)
+		el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/br3")))
+		el.click()
 
 # google login
 # el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/android.view.ViewGroup/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[3]")))
@@ -42,16 +52,6 @@ def loginWithUsername():
 # print(5)
 
 def search():
-	# skip	
-	el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/ctj")))
-	el.click()
-	# start watching
-	el = WebDriverWait(driver, 40).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/cxc")))
-	el.click()
-	el = WebDriverWait(driver, 40).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/b8l")))
-	driver.swipe(250, 700, 250, 170, 1000)
-	el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/br3")))
-	el.click()
 
 	for i in keyword:
 		# input keyword

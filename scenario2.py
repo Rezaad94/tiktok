@@ -1,17 +1,6 @@
 from scenario1 import *
 
 def search2():	
-	# skip	
-	el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/ctj")))
-	el.click()
-	# start watching
-	el = WebDriverWait(driver, 40).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/cxc")))
-	el.click()
-	el = WebDriverWait(driver, 40).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/b8l")))
-	driver.swipe(250, 700, 250, 170, 1000)
-	el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/br3")))
-	el.click()
-
 	for i in keyword:
 		# input keyword
 		print(i)
