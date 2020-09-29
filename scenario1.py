@@ -24,11 +24,8 @@ desired_caps = {
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
 def loginWithUsername():
-	print(1)
-	print(2)
-	el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/bpb")))
+	el = WebDriverWait(driver, 50).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/bpb")))
 	el.click()
-	print(3)
 	# login Username and password
 	el = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/w7")))
 	el.click()
