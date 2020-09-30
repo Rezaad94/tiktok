@@ -17,6 +17,6 @@ else:
 	  "deviceName": "5d71e577", # this for real device
 	  #"deviceName": "192.168.56.103:5555",
 	  "appPackage": "com.ss.android.ugc.trill",
-	  "app": "c:/work/tiktok/tiktok-asia-17-6-41.apk",
+	  "app": "c:\\work\\tiktok\\tiktok-asia-17-6-41.apk",
 	  "appActivity":"com.ss.android.ugc.aweme.splash.SplashActivity"
 	}
