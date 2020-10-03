@@ -1,4 +1,4 @@
-DEBUG=False
+DEBUG=True
 
 if DEBUG:
 	desired_caps = {
@@ -7,7 +7,8 @@ if DEBUG:
 	  "deviceName": "29aad0ed", 
 	  # "deviceName": "192.168.56.103:5555",
 	  "appPackage": "com.ss.android.ugc.trill",
-	  "app": "D:\\Reza\\tiktok-asia-17-6-3.apk",
+	  # "app": "D:\\Reza\\tiktok-asia-17-6-3.apk",
+	  "app" : "/home/tester/Downloads/tiktok-asia-17-6-3.apk",
 	  "appActivity":"com.ss.android.ugc.aweme.splash.SplashActivity"
 	}
 else:
