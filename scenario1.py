@@ -7,17 +7,6 @@ from selenium.webdriver.common.keys import Keys
 import time
 from desirecaps import *
 
-#DEBUG = True, your environemt
-#DEBUG = False, my enviroment
-DEBUG=True
-#change username an password in here
-if DEBUG:
-	username= 'testersky219@gmail.com'
-	password='tidakada1'
-else:
-	username= 'catwillwork@gmail.com'
-	password='whenyousleep!@#'
-
 # wait time in seecond, increas wait time if error happend,  
 waitTime= 80
 
