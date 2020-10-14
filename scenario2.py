@@ -24,7 +24,7 @@ def search2():
 
 def scenario2():
 	findAds()
-	driver.swipe(250, 700, 250, 170, 1000)
+	driver.swipe(250, 700, 250, 100, 1000)
 	findAds()
 	try:
 		el = WebDriverWait(driver, waitTime).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/k_")))

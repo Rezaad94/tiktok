@@ -7,8 +7,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 from desirecaps import *
 
-# wait time in seecond, increas wait time if error happend,  
-waitTime= 80
+# wait time in seecond, increase wait time if error happend,  
+waitTime= 100
 
 keyword=['청소신','깔끔대장','denps','비타민','곰팡이제거제','생활공작소','윤주부','YJB','오늘습관','하수구','냄새','BLACK','HOLE','거치대','일상공감','브랜드리스','침대의진실','커먼하우스','만능혀클리너','궁서체','만능청소부','두피쿨리닉','LIFE GOODS','곰팡이','세탁기','청소','해충차단','세탁조크리너','깨끗한가','오늘의','발견','크릴오일','화장실','청소','뒤꿈치','각질','레알캠','Real Cam','WHIA휘아','쪽쪽이살균기','라이프굿즈','마사지']
 
@@ -37,7 +37,7 @@ def loginWithUsername():
 		el = WebDriverWait(driver, waitTime).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/cxc")))
 		el.click()
 		el = WebDriverWait(driver, waitTime).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/as7")))
-		driver.swipe(250, 700, 250, 170, 1000)
+		driver.swipe(250, 700, 250, 100, 1000)
 		try:
 			el = WebDriverWait(driver, waitTime).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/br3")))
 			el.click()
@@ -110,11 +110,11 @@ def writeFile(link):
 
 def scenario1():
 	findAds()
-	driver.swipe(250, 700, 250, 170, 1000)
+	driver.swipe(250, 700, 250, 100, 1000)
 	findAds()
-	driver.swipe(250, 700, 250, 170, 1000)
+	driver.swipe(250, 700, 250, 100, 1000)
 	findAds()
-	driver.swipe(250, 700, 250, 170, 1000)
+	driver.swipe(250, 700, 250, 100, 1000)
 	findAds()
 	try:
 		el = WebDriverWait(driver, waitTime).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/k_")))
