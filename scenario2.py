@@ -33,5 +33,10 @@ def scenario2():
 		el = WebDriverWait(driver, waitTime).until(EC.presence_of_element_located((MobileBy.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout/dmt.viewpager.DmtViewPager.c/android.widget.FrameLayout/android.view.ViewGroup[2]/android.widget.ImageView")))
 		el.click()
 
-loginWithUsername()
-search2()
+if WebDriverWait(driver, waitTime).until(EC.element_to_be_clickable((MobileBy.ID, "com.ss.android.ugc.trill:id/bno"))).is_displayed():
+	loginWithUsername()
+	clickSearchButton()
+	search2()
+else:
+	clickSearchButton()
+	search2()
