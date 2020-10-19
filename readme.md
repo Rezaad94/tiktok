@@ -19,7 +19,8 @@ check device
 $ adb devices
 2. Start appium server
 3. Uninstall tiktok if version is not 17.6.41
-bot will install automatically.
+$ adb install tiktok-asia-17-6-41.apk
+push install button on phone ( if you do not push install buton within 10seconds, it will be canlced )
 4. Run Python
 $ python scenario1.py
 
