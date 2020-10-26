@@ -110,18 +110,24 @@ def findAds():
 	# ads : com.ss.android.ugc.trill:id/bs3
 
 	beginTime = time.time()
-	link = getLink()
 	
 	# if WebDriverWait(driver, waitTime).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/a7y"))).is_displayed():
 	# 	el = WebDriverWait(driver, waitTime).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/a7y")))
 	# 	li = list(str(el.text).split(" "))
 	# 	if "[sponsor]" in li:
 	# 		writeFile(link)
-
-	if driver.find_elements_by_id("com.ss.android.ugc.trill:id/bz") or driver.find_elements_by_id("com.ss.android.ugc.trill:id/bs3"):
-		logging.info("Try to find sponsor element: found")
-		writeFile(link)
-	else:
+	# if driver.find_elements_by_id("com.ss.android.ugc.trill:id/bz") or driver.find_elements_by_id("com.ss.android.ugc.trill:id/bs3"):
+	# 	logging.info("Try to find sponsor element: found")
+	# 	writeFile(link)
+	# else:
+	# 	logging.info("Try to find sponsor element: not found")
+	
+	try: 
+	    el = WebDriverWait(driver, 30).until(EC.presence_of_element_located((MobileBy.ID, "com.ss.android.ugc.trill:id/air")))
+	    el.click()
+	    logging.info("Try to find sponsor element: found")
+	    writeFile(getLink())
+	except:
 		logging.info("Try to find sponsor element: not found")
 
 	watchTime = round(time.time() - beginTime)

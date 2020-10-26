@@ -1,7 +1,7 @@
 
 #DEBUG = True, your environemt
 #DEBUG = False, my enviroment
-DEBUG=False
+DEBUG=True
 
 if DEBUG:
 	desired_caps = {
